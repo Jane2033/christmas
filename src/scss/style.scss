@@ -98,24 +98,47 @@ header{
             height: 100vh;
         }
     }
+
+    &__section-none{
+        width: 100%;
+        background: none;
+
+        @media (min-width: 1024px) {
+            height: 100vh;
+        }
+    }
+
 }
 
 .main{
-    @include flexCenter($justify: start, $direction: column);
+    @include flexCenter($justify: flex-start, $direction: column);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    background-image: linear-gradient(0deg, #963f38, #ce4c4a, #ff665f, #ce4c4a, #963f38);
+
+    @media (min-width: 1024px) {
+        background: none;
+    }
+
 }
 
 .hero{
     @include flexCenter($direction: column);
     width: 100%;
-    background: url('../img/hero_bg_sm.jpg');
+    background: url('../img/hero_bg_sm.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     margin: 1rem;
+
+    @media (min-width: 640px) {
+        background: url('../img/hero_bg_md.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
     @media (min-width: 1024px) {
         @include flexCenter($direction: row);
@@ -168,9 +191,10 @@ header{
     &__right{
         @include flexCenter;
         width: 100%;
+        height: 300px;
 
         @media (min-width: 1024px) {
-            @include flexCenter($align: end);
+            @include flexCenter($align: flex-end);
             width: 50%;
             height: 100%;                        
         }
@@ -178,14 +202,18 @@ header{
         &__img{
             max-width: 900px;
             min-width: 300px;
+            display: none;
+            
+
+            @media (min-width: 640px) {
+                display: block;   
+                margin-bottom: 6rem;       
+            }
 
             img{
                 object-fit: contain;
                 width: 100%;
                 
-                @media (min-width: 1024px) {
-                    margin-bottom: 6rem;                  
-                }
             }
         }
 
@@ -210,21 +238,24 @@ header{
 
     &__title{
         @include flexCenter;
-        width: 100%;
+        max-width: 320px;
+        min-width: 150px;
 
         img{
-            max-width: 320px;
-            min-width: 150px;
+            width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 7px 5px rgb(91, 27, 27));
         }
     }
 
     &__subtitle{
         @include flexCenter;
-        width: 100%;
+        max-width: 400px;
+        min-width: 150px;
 
         img{
-            max-width: 320px;
-            min-width: 150px;
+            width: 100%;
+            object-fit: contain;
         }
     }
     
@@ -232,7 +263,8 @@ header{
         @include flexCenter($direction: column);
 
         @media (min-width: 1024px) {
-            @include flexCenter($direction: row);           
+            @include flexCenter($direction: row);
+            margin: 0 6rem 2rem;           
         }
 
         &__top{
@@ -272,8 +304,124 @@ header{
     
 
     @media (min-width: 1024px) {
-        height: 100vh;
+        height: 200vh;
     }
+
+    &__title{
+        @include flexCenter;
+        max-width: 320px;
+        min-width: 150px;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__products{
+        position: relative;
+
+        &__product{
+            @include flexCenter($direction: column);
+            margin: 2rem 0;
+
+            &__wrapper{
+                @include flexCenter($direction: column-reverse);
+                padding: 0 1rem;
+                margin: 1rem;
+                background-image: linear-gradient(90deg, #cebda0, #ffffff ,#cebda0);
+                border: solid 15px;
+                border-image: linear-gradient(90deg, #547853, #709d72, #314b35, #709d72, #547853) 30;
+    
+                @media (min-width: 1024px) {
+                    @include flexCenter; 
+                    padding: 0;             
+                }
+
+                &__left{
+                    @include flexCenter($direction: column);
+                    transform: translate(0, -10%);                
+    
+                    @media (min-width: 1024px) {
+                        transform: translate(10%, -10%);                    
+                    }
+    
+    
+                    &__title{
+                        @include flexCenter;
+                        max-width: 320px;
+                        min-width: 150px;
+                        transform: translate(0,-20%);
+                
+                        img{
+                            width: 100%;
+                            object-fit: contain;
+                        }
+    
+                        @media (min-width: 1024px) {
+                            transform: translate(-20%,-30%);
+                        }
+                    }
+    
+                    &__content{
+                        @include flexCenter($align: flex-start ,$direction: column);
+
+                        @media (min-width: 480px) {
+                            min-width: 450px;                            
+                        }
+    
+    
+                        &__feature{
+                            @include flexCenter($align: flex-start);
+                            color: #7b6856;
+                            margin: 0.5rem 0;
+    
+                            i{
+                                margin-right: 0.5rem;
+                                font-size: 1.25rem;
+                            }
+    
+                            p{
+                                font-size: 1.25rem;
+                            }
+                        }
+                    }
+                }
+    
+                &__right{
+                    @include flexCenter;
+                    max-width: 300px;
+                    min-width: 150px;
+    
+                    img{
+                        object-fit: contain;
+                        width: 100%;
+                        transform: translateY(-20%);  
+    
+                        @media (min-width: 1024px) {
+                            transform: translateX(20%);                        
+                        }
+                    }
+                }
+
+            }
+            
+
+            &__cta{
+                @include flexCenter;
+        
+                max-width: 250px;
+                min-width: 150px;
+        
+                img{
+                    object-fit: contain;
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+
 
     
 }
@@ -388,7 +536,7 @@ header{
                 width: 100%;
 
                 @media (min-width: 1024px) {
-                    @include flexCenter($justify: end);                
+                    @include flexCenter($justify: flex-end);                
                 }
             }
 
@@ -397,7 +545,7 @@ header{
                 width: 100%;
 
                 @media (min-width: 1024px) {
-                    @include flexCenter($justify: start);                
+                    @include flexCenter($justify: flex-start);                
                 }
             }
 
