@@ -7,6 +7,76 @@
     flex-direction: $direction;
 }
 
+@keyframes bounce {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    70%{
+        transform: scale(0.9);
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }    
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }    
+}
+
+@keyframes spin {
+    100%{
+        transform: rotateY(360deg);
+    }    
+}
+
+@keyframes drop {
+    0%{
+        opacity: 0;
+    }
+    
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translate(20%, 70%) rotate(30deg);
+    }
+}
+
+@keyframes drop2 {
+    0%{
+        opacity: 0;
+    }
+    
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translate(-20%, 80%) rotate(-30deg); 
+    }
+}
+
+
+
 
 *,html{
     scroll-behavior: smooth;
@@ -18,7 +88,7 @@ body{
     max-width: 1920px;
     margin: auto;
     overflow-x: hidden;
-    background-image: linear-gradient(0deg, #963f38, #ce4c4a, #ff665f, #ce4c4a, #963f38);
+    background-image: linear-gradient(90deg, #963f38, #ce4c4a, #ff665f, #ce4c4a, #963f38);
 
     @media (min-width: 1024px) {
         height: 500vh;
@@ -31,7 +101,7 @@ header{
     position: fixed;
     z-index: 99;
     top: 0;
-    filter: drop-shadow(0 7px 10px rgb(49, 75, 53));
+    filter: drop-shadow(0 3px 30px rgb(0, 0, 0));
 
     .navbar{
         @include flexCenter($justify: space-between);
@@ -80,11 +150,92 @@ header{
 
 }
 
+.snowflake{
+    position: absolute;
+    max-width: 100px;
+    filter: drop-shadow(0 3px 5px #999999);
+
+    &__1{
+        top: 0;
+        left: 20%;
+        animation: drop 3s infinite ease-out;
+    }
+
+    &__2{
+        top: 20%;
+        right: 0;
+        animation: drop2 3s infinite ease-out;
+        animation-delay: 1s;
+    }
+
+    &__3{
+        top: 30%;
+        left: 0;
+        animation: drop 3s infinite ease-out;
+        animation-delay: 1.5s;
+    }
+
+    &__4{
+        top: 40%;
+        right: 10%;
+        animation: drop 3s infinite ease-out;
+        animation-delay: 2s;
+    }
+
+    &__5{
+        top: 10%;
+        right: 20%;
+        animation: drop2 4s infinite ease-out;
+        animation-delay: 2s;
+    }
+
+    &__6{
+        top: 20%;
+        left: 20%;
+        animation: drop2 4s infinite ease-out;
+        animation-delay: 2s;
+    }
+
+    &__7{
+        top: 60%;
+        right: 20%;
+        animation: drop2 4s infinite ease-out;
+        animation-delay: 2s;
+    }
+
+    &__8{
+        top: 50%;
+        left: 15%;
+        animation: drop2 4s infinite ease-out;
+        animation-delay: 2s;
+    }
+
+    &__9{
+        bottom: 30%;
+        left: 5%;
+        animation: drop 3s infinite ease-out;
+        animation-delay: 2s;
+    }
+}
+
 .light{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+
+    &__section-leaf{
+        width: 100%;
+        background: none;
+
+        @media (min-width: 1024px) {
+            background: url(../img/christmasleaf.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+    }
 
     &__section{
         width: 100%;
@@ -92,6 +243,33 @@ header{
 
         @media (min-width: 1024px) {
             background: url(../img/lights.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+    }
+
+    &__section-top{
+        width: 100%;
+        background: none;
+
+        @media (min-width: 1024px) {
+            background: url(../img/light_top.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+    }
+
+    &__section-bottom{
+        width: 100%;
+        background: none;
+        position: relative;
+
+        @media (min-width: 1024px) {
+            background: url(../img/light_bottom.png);
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -132,6 +310,7 @@ header{
     background-size: cover;
     background-position: center;
     margin: 1rem;
+    position: relative;
 
     @media (min-width: 640px) {
         background: url('../img/hero_bg_md.jpg');
@@ -150,75 +329,107 @@ header{
     }
 
     &__left{
-        @include flexCenter($direction: column);
+        @include flexCenter;
         width: 100%;
 
         @media (min-width: 1024px) {
-            width: 50%;
+            width: 70%;
             height: 100%;                        
         }
 
-        &__top{
+        &__wrapper{
             @include flexCenter;
-            max-width: 400px;
+            position: relative;
+            max-width: 600px;
             min-width: 150px;
+            animation: bounce 0.8s ease-in-out;
 
-            img{
+            &__title{
                 object-fit: contain;
                 width: 100%;
-                margin-top: 72px;
-
+                margin-top: 3.5rem;    
             }
         }
 
-        &__bottom{
-            @include flexCenter;
-            width: 100%;
+    }
 
-            &__img{
-                max-width: 200px;
-                min-width: 150px;
-    
-                img{
-                    object-fit: contain;
-                    width: 100%;
-    
-                }
-            }
+
+    .lightsweep{
+        position: absolute;
+        filter: brightness(1.5);
+        mask-size: 300% 200%;
+        mask-image: linear-gradient(-45deg, rgb(255, 255, 255, 0) 40%, rgb(255, 255, 255, 1) 50%, rgb(255, 255, 255, 0) 60%);
+        transition: mask-position;
+        transform: translate3d(0, 0, 0);
+        transition-duration: 3s;
+        animation: move 1.5s infinite ease-out;
+    }
+
+    @keyframes move {
+        0%{
+            mask-position: 150% 0px;
+        }
+
+        100%{
+            mask-position: 0% 0px;
         }
     }
 
     &__right{
         @include flexCenter;
         width: 100%;
-        height: 300px;
+        margin: 1rem;
 
         @media (min-width: 1024px) {
-            @include flexCenter($align: flex-end);
-            width: 50%;
+            width: 30%;
             height: 100%;                        
         }
 
-        &__img{
-            max-width: 900px;
-            min-width: 300px;
-            display: none;
-            
-
-            @media (min-width: 640px) {
-                display: block;   
-                margin-bottom: 6rem;       
-            }
-
-            img{
-                object-fit: contain;
-                width: 100%;
-                
-            }
+        &__wrapper{
+            position: relative;
+            max-width: 400px;
+            min-width: 150px;
         }
 
+        .swiper{
+            @include flexCenter;
+            width: 100%;
+            height: 400px;
+            animation: fadeIn 0.5s linear;
+    
+            .swiper-wrapper{
+    
+                .swiper-slide{
+    
+                    a{
+                        width: 100%;
+            
+                        img{
+                            object-fit: contain;
+                            width: 100%;
+                        }
+                    }
+                }
+    
+            }
+    
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                text-align: center;
+                opacity: 1;
+                background: rgba(0, 0, 0, 0.2);
+            }
+    
+            .swiper-pagination-bullet-active {
+                background: #8fa0ff;
+            }
+        }
     }
+
 }
+
+
 
 .s2{
     @include flexCenter($direction: column);
@@ -230,15 +441,14 @@ header{
 
     @media (min-width: 1024px) {
         background: url(../img/s2_bg.png);
-        background-position: center;
+        background-position: bottom;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 100vh;
     }
 
     &__title{
         @include flexCenter;
-        max-width: 320px;
+        max-width: 600px;
         min-width: 150px;
 
         img{
@@ -301,15 +511,23 @@ header{
 .s3{
     @include flexCenter($direction: column);
     width: 100%;
+    background: url(../img/s2_bg_sm.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 0;
     
 
     @media (min-width: 1024px) {
-        height: 200vh;
+        background: url(../img/s3_bg.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
     }
 
     &__title{
         @include flexCenter;
-        max-width: 320px;
+        max-width: 600px;
         min-width: 150px;
 
         img{
@@ -434,6 +652,8 @@ header{
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    position: relative;
+    overflow-x: hidden;
 
     @media (min-width: 1024px) {
         height: 200vh;
@@ -442,7 +662,7 @@ header{
 
     &__title{
         @include flexCenter;
-        max-width: 400px;
+        max-width: 500px;
         min-width: 150px;
 
         img{
@@ -462,7 +682,7 @@ header{
 
         &__title{
             @include flexCenter;
-            max-width: 500px;
+            max-width: 600px;
             min-width: 150px;
     
             img{
@@ -474,6 +694,7 @@ header{
         &__coupons{
             width: 100%;
             @include flexCenter($direction: column);
+            position: relative;
 
             @media (min-width: 768px) {
                 @include flexCenter($direction: row);                
@@ -514,7 +735,7 @@ header{
 
         &__title{
             @include flexCenter;
-            max-width: 500px;
+            max-width: 600px;
             min-width: 150px;
 
             img{
@@ -572,7 +793,10 @@ header{
             }
         }
     }
+
 }
+
+
 
 footer{
     @include flexCenter;
