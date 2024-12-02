@@ -10,36 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script type="module" crossorigin src="./assets/index-BdqxkMxt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C7VHiqKU.css">
+    <script type="module" crossorigin src="./assets/index-BG2LnqPI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CovKXtnp.css">
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v21.0"></script>
+    <script type="text/javascript">LineIt.loadButton();</script>
     <header>
       <nav class="navbar">
-        <img class="navbar__logo" src="./assets/logo-VHnNTOz-.svg" href="#hero">
-        <ul class="navbar__items">
-          <li class="navbar__items__item" href="#s2">
+        <div class="navbar__main">
+          <img class="navbar__main__logo" src="data:image/png;base64,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" href="#hero">
+          <div class="navbar__main__items">
+            <div class="fb-share-button navbar__main__items__item fb-share" data-href="https://jane2033.github.io/christmas/" data-layout="" data-size="">
+              <i class="bi bi-facebook"></i>
+              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjane2033.github.io%2Fchristmas%2F&amp;src=sdkpreparse" class="">分享</a>
+            </div>
+            <div class="fb-share-button navbar__main__items__item line-share" data-href="https://jane2033.github.io/christmas/" data-layout="" data-size="">
+              <i class="bi bi-line"></i>
+              <a target="_blank" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fjane2033.github.io%2Fchristmas%2F&amp;src=sdkpreparse" class="">分享</a>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar__sub">
+          <li class="navbar__sub__item">
             <a href="#s2">限量套組禮</a>
           </li>
-          <li class="navbar__items__item" href="#s2">
-            <a href="#s2">年度必買</a>
+          <li class="navbar__sub__item">
+            <a href="#s3">年度必買</a>
           </li>
-          <li class="navbar__items__item" href="#s2">
-            <a href="#s2">會員獨享</a>
+          <li class="navbar__sub__item">
+            <a href="#s4">會員獨享</a>
           </li>
         </ul>
-        <div class="navbar__mobile">
-          <i class="navbar__mobile__icon bi bi-list"></i>
-        </div>
       </nav>
     </header>
-    <div class="light">
-      <div class="light__section-leaf"></div>
-      <div class="light__section-leaf"></div>
-      <div class="light__section-bottom">
-      </div>
-      <div class="light__section-top"></div>
-    </div>
     <img src="./assets/%E9%9B%AA%E8%8A%B1-CUnFMJLN.png" class="snowflake snowflake__2">
     <img src="./assets/%E9%9B%AA%E8%8A%B1-CUnFMJLN.png" class="snowflake snowflake__6">
     <img src="./assets/%E9%9B%AA%E8%8A%B1-CUnFMJLN.png" class="snowflake snowflake__7">
@@ -47,6 +52,7 @@
     <img src="./assets/%E9%9B%AA%E8%8A%B1-CUnFMJLN.png" class="snowflake snowflake__9">
     <section class="main">
       <div id="hero" class="hero">
+        <div class="hero__bg-leaf"></div>
         <img src="./assets/%E9%9B%AA%E8%8A%B1-CUnFMJLN.png" class="snowflake snowflake__1">
         <img src="./assets/%E9%9B%AA%E8%8A%B1-CUnFMJLN.png" class="snowflake snowflake__2">
         <img src="./assets/%E9%9B%AA%E8%8A%B1-CUnFMJLN.png" class="snowflake snowflake__3">
@@ -93,95 +99,99 @@
         </div>
       </div>
       <div id="s2" class="s2">
-        <div class="s2__title">
-          <img src="./assets/%E9%99%90%E9%87%8F%E5%A5%97%E7%B5%84%E6%A8%99%E9%A1%8C-Bf2amudR.png">
-        </div>
-        <div class="s2__subtitle">
-          <img src="./assets/%E9%80%81%E6%BF%80%E8%80%90%E7%9B%8A%E5%A5%BD%E7%9B%8A%E6%B4%BB-DDTRJINe.png">
-        </div>
-        <div class="s2__cards">
-          <div class="s2__cards__top">
-            <a class="s2__cards__img" href="https://reurl.cc/Kd6lmR" target="_blank">
-              <img src="./assets/%E8%BA%AB%E5%BF%83%E9%80%9A%E6%9A%A2%E7%B5%84-D-n7KGD7.png">
-            </a>
-            <a class="s2__cards__img" href="https://reurl.cc/yDyvz6" target="_blank">
-              <img src="./assets/%E7%BE%8E%E5%9E%8B%E8%80%80%E7%9C%BC%E7%B5%84-DY1REryX.png">
-            </a>
+        <div class="s2__bg-bottom">
+          <div class="s2__title">
+            <img src="./assets/%E9%99%90%E9%87%8F%E5%A5%97%E7%B5%84%E6%A8%99%E9%A1%8C-Bf2amudR.png">
           </div>
-          <div class="s2__cards__bottom">
-            <a class="s2__cards__img" href="https://reurl.cc/WA4Nl5" target="_blank">
-              <img src="./assets/%E9%AB%94%E8%B3%AA%E5%BC%B7%E5%81%A5%E7%B5%84-DpN-Hum6.png">
-            </a>
-            <a class="s2__cards__img" href="https://reurl.cc/zpyD0p" target="_blank">
-              <img src="./assets/%E5%81%A5%E5%BA%B7%E5%AF%B6%E8%B2%9D%E7%B5%84-Cu_h5121.png">
-            </a>
+          <div class="s2__subtitle">
+            <img src="./assets/%E9%80%81%E6%BF%80%E8%80%90%E7%9B%8A%E5%A5%BD%E7%9B%8A%E6%B4%BB-DDTRJINe.png">
+          </div>
+          <div class="s2__cards">
+            <div class="s2__cards__top">
+              <a class="s2__cards__img" href="https://reurl.cc/Kd6lmR" target="_blank">
+                <img src="./assets/%E8%BA%AB%E5%BF%83%E9%80%9A%E6%9A%A2%E7%B5%84-D-n7KGD7.png">
+              </a>
+              <a class="s2__cards__img" href="https://reurl.cc/yDyvz6" target="_blank">
+                <img src="./assets/%E7%BE%8E%E5%9E%8B%E8%80%80%E7%9C%BC%E7%B5%84-DY1REryX.png">
+              </a>
+            </div>
+            <div class="s2__cards__bottom">
+              <a class="s2__cards__img" href="https://reurl.cc/WA4Nl5" target="_blank">
+                <img src="./assets/%E9%AB%94%E8%B3%AA%E5%BC%B7%E5%81%A5%E7%B5%84-DpN-Hum6.png">
+              </a>
+              <a class="s2__cards__img" href="https://reurl.cc/zpyD0p" target="_blank">
+                <img src="./assets/%E5%81%A5%E5%BA%B7%E5%AF%B6%E8%B2%9D%E7%B5%84-Cu_h5121.png">
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div id="s3" class="s3">
-        <div class="s3__title">
-          <img src="./assets/%E5%B9%B4%E5%BA%A6%E5%BF%85%E8%B2%B7%E6%A8%99%E9%A1%8C-CtqFcuK7.png">
-        </div>
-        <div class="s3__products">
-          <div class="s3__products__product">
-            <div class="s3__products__product__wrapper">
-              <div class="s3__products__product__wrapper__left">
-                <div class="s3__products__product__wrapper__left__title">
-                  <img src="./assets/%E6%B0%A3%E6%B8%A9%E8%AE%8A%E5%8C%96%E5%BF%85%E5%82%99-DC8O4P5S.png">
-                </div>
-                <div class="s3__products__product__wrapper__left__content">
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>複合三益菌，含A17M調理菌株。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>含豐富啤酒發酵物、初乳蛋白，補充多元營養。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>有感調整體質，養成黃金防護力。</p>
-                  </div>
-                </div>
-              </div>
-              <div class="s3__products__product__wrapper__right">
-                <img src="./assets/%E7%9B%8A%E4%BC%8F%E6%95%8F-DnrhqL6x.png">
-              </div>
-            </div>
-            <a class="s3__products__product__cta" href="https://reurl.cc/Egng1R" target="_blank">
-              <img src="./assets/%E5%9F%B9%E9%A4%8A%E5%A5%BD%E9%AB%94%E8%B3%AA-CjPdZRqf.png">
-            </a>
+        <div class="s3__bg-top">
+          <div class="s3__title">
+            <img src="./assets/%E5%B9%B4%E5%BA%A6%E5%BF%85%E8%B2%B7%E6%A8%99%E9%A1%8C-CtqFcuK7.png">
           </div>
-        </div>
-        <div class="s3__products">
-          <div class="s3__products__product">
-            <div class="s3__products__product__wrapper">
-              <div class="s3__products__product__wrapper__left">
-                <div class="s3__products__product__wrapper__left__title">
-                  <img src="./assets/%E5%86%AC%E5%AD%A3%E9%A4%8A%E7%94%9F%E6%8E%A8%E8%96%A6-Do5tGi26.png">
+          <div class="s3__products">
+            <div class="s3__products__product">
+              <div class="s3__products__product__wrapper">
+                <div class="s3__products__product__wrapper__left">
+                  <div class="s3__products__product__wrapper__left__title">
+                    <img src="./assets/%E6%B0%A3%E6%B8%A9%E8%AE%8A%E5%8C%96%E5%BF%85%E5%82%99-DC8O4P5S.png">
+                  </div>
+                  <div class="s3__products__product__wrapper__left__content">
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>複合三益菌，含A17M調理菌株。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>含豐富啤酒發酵物、初乳蛋白，補充多元營養。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>有感調整體質，養成黃金防護力。</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="s3__products__product__wrapper__left__content">
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>亞洲科研實證，美國哈佛大學研究菌株。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>新升級添加4倍GABA，提高入睡品質。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>減糖60%，更健康擁抱快樂感。</p>
-                  </div>
+                <div class="s3__products__product__wrapper__right">
+                  <img src="./assets/%E7%9B%8A%E4%BC%8F%E6%95%8F-DnrhqL6x.png">
                 </div>
               </div>
-              <div class="s3__products__product__wrapper__right">
-                <img src="./assets/%E5%A5%BD%E6%AC%A3%E6%83%85-CIQk7z3-.png">
-              </div>
+              <a class="s3__products__product__cta" href="https://reurl.cc/Egng1R" target="_blank">
+                <img src="./assets/%E5%9F%B9%E9%A4%8A%E5%A5%BD%E9%AB%94%E8%B3%AA-CjPdZRqf.png">
+              </a>
             </div>
-            <a class="s3__products__product__cta" href="https://reurl.cc/RL0LWg" target="_blank">
-              <img src="./assets/%E7%94%9C%E7%BE%8E%E9%80%B2%E5%A4%A2%E9%84%89-DSeSqTI9.png">
-            </a>
+          </div>
+          <div class="s3__products">
+            <div class="s3__products__product">
+              <div class="s3__products__product__wrapper">
+                <div class="s3__products__product__wrapper__left">
+                  <div class="s3__products__product__wrapper__left__title">
+                    <img src="./assets/%E5%86%AC%E5%AD%A3%E9%A4%8A%E7%94%9F%E6%8E%A8%E8%96%A6-Do5tGi26.png">
+                  </div>
+                  <div class="s3__products__product__wrapper__left__content">
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>亞洲科研實證，美國哈佛大學研究菌株。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>新升級添加4倍GABA，提高入睡品質。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>減糖60%，更健康擁抱快樂感。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s3__products__product__wrapper__right">
+                  <img src="./assets/%E5%A5%BD%E6%AC%A3%E6%83%85-CIQk7z3-.png">
+                </div>
+              </div>
+              <a class="s3__products__product__cta" href="https://reurl.cc/RL0LWg" target="_blank">
+                <img src="./assets/%E7%94%9C%E7%BE%8E%E9%80%B2%E5%A4%A2%E9%84%89-DSeSqTI9.png">
+              </a>
+            </div>
           </div>
         </div>
       </div>
