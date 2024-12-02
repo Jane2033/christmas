@@ -13,32 +13,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v21.0"></script>
+    <script type="text/javascript">LineIt.loadButton();</script>
     <header>
       <nav class="navbar">
-        <img class="navbar__logo" src="./src/img/logo.svg" href="#hero">
-        <ul class="navbar__items">
-          <li class="navbar__items__item" href="#s2">
+        <div class="navbar__main">
+          <img class="navbar__main__logo" src="./src/img/logo.png" href="#hero">
+          <div class="navbar__main__items">
+            <div class="fb-share-button navbar__main__items__item fb-share" data-href="https://jane2033.github.io/christmas/" data-layout="" data-size="">
+              <i class="bi bi-facebook"></i>
+              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjane2033.github.io%2Fchristmas%2F&amp;src=sdkpreparse" class="">分享</a>
+            </div>
+            <div class="fb-share-button navbar__main__items__item line-share" data-href="https://jane2033.github.io/christmas/" data-layout="" data-size="">
+              <i class="bi bi-line"></i>
+              <a target="_blank" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fjane2033.github.io%2Fchristmas%2F&amp;src=sdkpreparse" class="">分享</a>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar__sub">
+          <li class="navbar__sub__item">
             <a href="#s2">限量套組禮</a>
           </li>
-          <li class="navbar__items__item" href="#s2">
-            <a href="#s2">年度必買</a>
+          <li class="navbar__sub__item">
+            <a href="#s3">年度必買</a>
           </li>
-          <li class="navbar__items__item" href="#s2">
-            <a href="#s2">會員獨享</a>
+          <li class="navbar__sub__item">
+            <a href="#s4">會員獨享</a>
           </li>
         </ul>
-        <div class="navbar__mobile">
-          <i class="navbar__mobile__icon bi bi-list"></i>
-        </div>
       </nav>
     </header>
-    <div class="light">
-      <div class="light__section-leaf"></div>
-      <div class="light__section-leaf"></div>
-      <div class="light__section-bottom">
-      </div>
-      <div class="light__section-top"></div>
-    </div>
     <img src="./src/img/雪花.png" class="snowflake snowflake__2">
     <img src="./src/img/雪花.png" class="snowflake snowflake__6">
     <img src="./src/img/雪花.png" class="snowflake snowflake__7">
@@ -46,6 +51,7 @@
     <img src="./src/img/雪花.png" class="snowflake snowflake__9">
     <section class="main">
       <div id="hero" class="hero">
+        <div class="hero__bg-leaf"></div>
         <img src="./src/img/雪花.png" class="snowflake snowflake__1">
         <img src="./src/img/雪花.png" class="snowflake snowflake__2">
         <img src="./src/img/雪花.png" class="snowflake snowflake__3">
@@ -92,95 +98,99 @@
         </div>
       </div>
       <div id="s2" class="s2">
-        <div class="s2__title">
-          <img src="./src/img/限量套組標題.png">
-        </div>
-        <div class="s2__subtitle">
-          <img src="./src/img/送激耐益好益活.png">
-        </div>
-        <div class="s2__cards">
-          <div class="s2__cards__top">
-            <a class="s2__cards__img" href="https://reurl.cc/Kd6lmR" target="_blank">
-              <img src="./src/img/身心通暢組.png">
-            </a>
-            <a class="s2__cards__img" href="https://reurl.cc/yDyvz6" target="_blank">
-              <img src="./src/img/美型耀眼組.png">
-            </a>
+        <div class="s2__bg-bottom">
+          <div class="s2__title">
+            <img src="./src/img/限量套組標題.png">
           </div>
-          <div class="s2__cards__bottom">
-            <a class="s2__cards__img" href="https://reurl.cc/WA4Nl5" target="_blank">
-              <img src="./src/img/體質強健組.png">
-            </a>
-            <a class="s2__cards__img" href="https://reurl.cc/zpyD0p" target="_blank">
-              <img src="./src/img/健康寶貝組.png">
-            </a>
+          <div class="s2__subtitle">
+            <img src="./src/img/送激耐益好益活.png">
+          </div>
+          <div class="s2__cards">
+            <div class="s2__cards__top">
+              <a class="s2__cards__img" href="https://reurl.cc/Kd6lmR" target="_blank">
+                <img src="./src/img/身心通暢組.png">
+              </a>
+              <a class="s2__cards__img" href="https://reurl.cc/yDyvz6" target="_blank">
+                <img src="./src/img/美型耀眼組.png">
+              </a>
+            </div>
+            <div class="s2__cards__bottom">
+              <a class="s2__cards__img" href="https://reurl.cc/WA4Nl5" target="_blank">
+                <img src="./src/img/體質強健組.png">
+              </a>
+              <a class="s2__cards__img" href="https://reurl.cc/zpyD0p" target="_blank">
+                <img src="./src/img/健康寶貝組.png">
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div id="s3" class="s3">
-        <div class="s3__title">
-          <img src="./src/img/年度必買標題.png">
-        </div>
-        <div class="s3__products">
-          <div class="s3__products__product">
-            <div class="s3__products__product__wrapper">
-              <div class="s3__products__product__wrapper__left">
-                <div class="s3__products__product__wrapper__left__title">
-                  <img src="./src/img/氣温變化必備.png">
-                </div>
-                <div class="s3__products__product__wrapper__left__content">
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>複合三益菌，含A17M調理菌株。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>含豐富啤酒發酵物、初乳蛋白，補充多元營養。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>有感調整體質，養成黃金防護力。</p>
-                  </div>
-                </div>
-              </div>
-              <div class="s3__products__product__wrapper__right">
-                <img src="./src/img/益伏敏.png">
-              </div>
-            </div>
-            <a class="s3__products__product__cta" href="https://reurl.cc/Egng1R" target="_blank">
-              <img src="./src/img/培養好體質.png">
-            </a>
+        <div class="s3__bg-top">
+          <div class="s3__title">
+            <img src="./src/img/年度必買標題.png">
           </div>
-        </div>
-        <div class="s3__products">
-          <div class="s3__products__product">
-            <div class="s3__products__product__wrapper">
-              <div class="s3__products__product__wrapper__left">
-                <div class="s3__products__product__wrapper__left__title">
-                  <img src="./src/img/冬季養生推薦.png">
+          <div class="s3__products">
+            <div class="s3__products__product">
+              <div class="s3__products__product__wrapper">
+                <div class="s3__products__product__wrapper__left">
+                  <div class="s3__products__product__wrapper__left__title">
+                    <img src="./src/img/氣温變化必備.png">
+                  </div>
+                  <div class="s3__products__product__wrapper__left__content">
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>複合三益菌，含A17M調理菌株。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>含豐富啤酒發酵物、初乳蛋白，補充多元營養。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>有感調整體質，養成黃金防護力。</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="s3__products__product__wrapper__left__content">
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>亞洲科研實證，美國哈佛大學研究菌株。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>新升級添加4倍GABA，提高入睡品質。</p>
-                  </div>
-                  <div class="s3__products__product__wrapper__left__content__feature">
-                    <i class="bi bi-check2-circle"></i>
-                    <p>減糖60%，更健康擁抱快樂感。</p>
-                  </div>
+                <div class="s3__products__product__wrapper__right">
+                  <img src="./src/img/益伏敏.png">
                 </div>
               </div>
-              <div class="s3__products__product__wrapper__right">
-                <img src="./src/img/好欣情.png">
-              </div>
+              <a class="s3__products__product__cta" href="https://reurl.cc/Egng1R" target="_blank">
+                <img src="./src/img/培養好體質.png">
+              </a>
             </div>
-            <a class="s3__products__product__cta" href="https://reurl.cc/RL0LWg" target="_blank">
-              <img src="./src/img/甜美進夢鄉.png">
-            </a>
+          </div>
+          <div class="s3__products">
+            <div class="s3__products__product">
+              <div class="s3__products__product__wrapper">
+                <div class="s3__products__product__wrapper__left">
+                  <div class="s3__products__product__wrapper__left__title">
+                    <img src="./src/img/冬季養生推薦.png">
+                  </div>
+                  <div class="s3__products__product__wrapper__left__content">
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>亞洲科研實證，美國哈佛大學研究菌株。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>新升級添加4倍GABA，提高入睡品質。</p>
+                    </div>
+                    <div class="s3__products__product__wrapper__left__content__feature">
+                      <i class="bi bi-check2-circle"></i>
+                      <p>減糖60%，更健康擁抱快樂感。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s3__products__product__wrapper__right">
+                  <img src="./src/img/好欣情.png">
+                </div>
+              </div>
+              <a class="s3__products__product__cta" href="https://reurl.cc/RL0LWg" target="_blank">
+                <img src="./src/img/甜美進夢鄉.png">
+              </a>
+            </div>
           </div>
         </div>
       </div>

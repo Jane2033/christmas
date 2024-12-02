@@ -183,48 +183,77 @@ header {
 }
 header .navbar {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+header .navbar__main {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   width: 100%;
+  padding: 0 1rem;
 }
-header .navbar__logo {
-  margin: 0 1rem;
-  max-height: 3.5rem;
+header .navbar__main__logo {
+  max-width: 10rem;
   min-height: 3rem;
   cursor: pointer;
+  padding: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-header .navbar__items {
-  display: none;
-  margin: 1rem;
-}
-@media (min-width: 1024px) {
-  header .navbar__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-}
-header .navbar__items__item {
+header .navbar__main__items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin: 0 0.5rem;
-  padding: 1rem;
 }
-header .navbar__mobile {
-  display: block;
+header .navbar__main__items__item {
+  padding: 0.25rem 0.5rem;
+  margin: 0.5rem;
+  color: #FFFFFF;
+  border-radius: 0.25rem;
 }
-@media (min-width: 1024px) {
-  header .navbar__mobile {
-    display: none;
-  }
+header .navbar__main__items__item a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
 }
-header .navbar__mobile__icon {
-  font-size: 24px;
+header .navbar__main__items .fb-share {
+  background-color: #0866FF;
+}
+header .navbar__main__items .fb-share:hover {
+  background-color: #3482ff;
+}
+header .navbar__main__items .line-share {
+  background-color: #11c65d;
+}
+header .navbar__main__items .line-share:hover {
+  background-color: #2dca6e;
+}
+header .navbar__sub {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0.5rem;
+}
+header .navbar__sub__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  position: relative;
+}
+header .navbar__sub__item:hover {
+  background-color: #dfe4ff;
+  transition: 0.4s;
+  border-radius: 0.25rem;
 }
 header .navbar ul, header .navbar li {
   list-style: none;
@@ -289,75 +318,6 @@ header .navbar ul, header .navbar li {
   animation-delay: 2s;
 }
 
-.light {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.light__section-leaf {
-  width: 100%;
-  background: none;
-}
-@media (min-width: 1024px) {
-  .light__section-leaf {
-    background: url(../img/christmasleaf.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
-}
-.light__section {
-  width: 100%;
-  background: none;
-}
-@media (min-width: 1024px) {
-  .light__section {
-    background: url(../img/lights.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
-}
-.light__section-top {
-  width: 100%;
-  background: none;
-}
-@media (min-width: 1024px) {
-  .light__section-top {
-    background: url(../img/light_top.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
-}
-.light__section-bottom {
-  width: 100%;
-  background: none;
-  position: relative;
-}
-@media (min-width: 1024px) {
-  .light__section-bottom {
-    background: url(../img/light_bottom.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
-}
-.light__section-none {
-  width: 100%;
-  background: none;
-}
-@media (min-width: 1024px) {
-  .light__section-none {
-    height: 100vh;
-  }
-}
-
 .main {
   display: flex;
   justify-content: flex-start;
@@ -381,11 +341,12 @@ header .navbar ul, header .navbar li {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background: url("../img/hero_bg_sm.png");
+  background: url("../img/hero_bg_sm.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 1rem;
+  padding: 7rem 0;
   position: relative;
 }
 @media (min-width: 640px) {
@@ -402,10 +363,24 @@ header .navbar ul, header .navbar li {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background: url("../img/hero_bg.png");
+    background: url("../img/christmasleaf.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
+    height: 100vh;
+  }
+}
+.hero__bg-leaf {
+  width: 100%;
+  background: none;
+  position: absolute;
+}
+@media (min-width: 1024px) {
+  .hero__bg-leaf {
+    background: url(../img/hero_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
   }
 }
@@ -436,7 +411,11 @@ header .navbar ul, header .navbar li {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  margin-top: 3.5rem;
+}
+@media (min-width: 1024px) {
+  .hero__left__wrapper__title {
+    margin-top: 4rem;
+  }
 }
 .hero .lightsweep {
   position: absolute;
@@ -513,19 +492,38 @@ header .navbar ul, header .navbar li {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  background: url(../img/s2_bg_sm.jpg);
-  background-position: center;
+  background: url(../img/s2_bg_sm.png);
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 3rem 0 5rem 0;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .s2 {
+    background: url(../img/light_bottom.png);
+    background-size: contain;
+    background-position: center;
+    padding: 0;
+  }
+}
+.s2__bg-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: none;
+}
+@media (min-width: 1024px) {
+  .s2__bg-bottom {
     background: url(../img/s2_bg.png);
     background-position: bottom;
-    background-repeat: no-repeat;
     background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
   }
 }
 .s2__title {
@@ -608,13 +606,11 @@ header .navbar ul, header .navbar li {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  background: url(../img/s2_bg_sm.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 5rem 0;
+  background: none;
+  padding-bottom: 5rem;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .s3 {
@@ -622,6 +618,25 @@ header .navbar ul, header .navbar li {
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+    padding: 5rem 0;
+  }
+}
+.s3__bg-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: url(../img/s2_bg_sm.png);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1024px) {
+  .s3__bg-top {
+    background: url(../img/light_bottom.png);
+    background-position: center;
+    height: 100%;
   }
 }
 .s3__title {
